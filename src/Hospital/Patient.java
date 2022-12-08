@@ -8,7 +8,7 @@ public class Patient {
         this.treatmentPlan = treatmentPlan;
         if(TreatmentPlan.code == 1){
             this.doctor = new Surgeon();
-        } if(TreatmentPlan.code == 2){
+        }else if(TreatmentPlan.code == 2){
             this.doctor = new Dentist();
         }else{
             this.doctor = new Therapist();

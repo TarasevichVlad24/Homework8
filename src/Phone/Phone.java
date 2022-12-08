@@ -28,7 +28,7 @@ public class Phone {
     public void sendMassage(String... numbers){
         StringBuilder phoneNumbers = new StringBuilder();
         for(String number: numbers){
-            phoneNumbers.append(number + " ,");
+            phoneNumbers.append(number + ", ");
         }
         System.out.print("Сообщения отправлены следующим номерам:" +phoneNumbers);
     }
