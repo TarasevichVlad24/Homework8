@@ -2,8 +2,8 @@ package Hospital;
 
 public class TreatmentPlan {
 
-    public static int code;
+    public int code;
     TreatmentPlan(int code){
-        TreatmentPlan.code = code;
+        this.code = code;
     }
 }

@@ -1,5 +1,8 @@
 package Phone;
 
+
+import java.util.Arrays;
+
 public class Phone {
     String number;
     String model;
@@ -25,13 +28,10 @@ public class Phone {
         System.out.println("Входящий (" + name + ") номер (" + number +") ");
     }
 
-    public void sendMassage(String... numbers){
-        StringBuilder phoneNumbers = new StringBuilder();
-        for(String number: numbers){
-            phoneNumbers.append(number + ", ");
-        }
-        System.out.print("Сообщения отправлены следующим номерам:" +phoneNumbers);
+    public void sendMassage(String... numbers) {
+        System.out.print("Сообщения отправлены следующим номерам:" + Arrays.toString(numbers));
     }
+
 
     @Override
     public String toString() {

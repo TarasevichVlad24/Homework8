@@ -1,17 +1,19 @@
 package Hospital;
 
 public class Patient {
-    TreatmentPlan treatmentPlan;
-    Doctor doctor;
+    private TreatmentPlan treatmentPlan;
 
     Patient(TreatmentPlan treatmentPlan){
         this.treatmentPlan = treatmentPlan;
-        if(TreatmentPlan.code == 1){
-            this.doctor = new Surgeon();
-        }else if(TreatmentPlan.code == 2){
-            this.doctor = new Dentist();
+    }
+
+    public Doctor getDoctor(){
+        if(treatmentPlan.code == 1){
+            return new Surgeon();
+        }else if(treatmentPlan.code == 2){
+            return new Dentist();
         }else{
-            this.doctor = new Therapist();
+            return new Therapist();
         }
     }
 }
